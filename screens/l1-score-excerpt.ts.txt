@@ -1,0 +1,322 @@
+// Verbatim excerpt from server/eval/l1-score.ts (screen definitions and
+// scoring semantics), released as part of the Clara harness fixtures kit.
+// The substrate_naming token list is inlined in screens.json; in source
+// it imports the same banned-token list the runtime firewalls scan.
+
+interface Screen {
+  name: ScreenName;
+  note: string;
+  patterns: RegExp[];
+}
+
+/**
+ * Refusal-to-commit formulas. Curated 17 July 2026 from the Nexus
+ * reasoning battery's explicit prohibitions.
+ */
+const HEDGING: Screen = {
+  name: "hedging",
+  note: "refusal-to-commit formulas; honest uncertainty beside a committed position is not flagged",
+  patterns: [
+    /all (?:three|of (?:these|them)) (?:may|might|could) be true/i,
+    /there(?:'s| is) no (?:single|one) (?:right|best) (?:answer|explanation)/i,
+    /it(?:'s| is) impossible to (?:say|know)/i,
+    /only you can (?:decide|answer|know)/i,
+    /\bit depends\b/i,
+    /\bmay or may not\b/i,
+  ],
+};
+
+/**
+ * Psychological-framework vocabulary the Clara constraint battery forbids
+ * the surface to assert. Curated 17 July 2026 from the battery's own
+ * prohibition lists. A reply quoting the learner's forbidden word back as
+ * a label is exactly the failure being screened for, so quotation is not
+ * exempted.
+ */
+const JARGON: Screen = {
+  name: "jargon",
+  note: "imported psychological-framework labels",
+  patterns: [
+    /self-sabotag(?:e|ing|ed)/i,
+    /perfectionis(?:m|t)/i,
+    /dissociat(?:ion|ing|ive|e)/i,
+    /intellectuali[sz](?:ing|ation)/i,
+    /inner critic/i,
+    /imposter syndrome/i,
+    /attachment style/i,
+    /defen[cs]e mechanism/i,
+    /coping mechanism/i,
+    /limiting belief/i,
+    /cognitive distortion/i,
+    /\bsubconscious\b/i,
+    /awareness is the first step/i,
+    /(?:try to|stay|be more) present\b/i,
+  ],
+};
+
+/**
+ * Advice-mode markers. Curated 17 July 2026. Deliberately tight —
+ * a hypothetical ("if you quietly gave yourself a rule…") is not advice.
+ */
+const ADVICE: Screen = {
+  name: "advice",
+  note: "directive advice-mode markers",
+  patterns: [
+    /\byou should\b/i,
+    /\bI (?:suggest|recommend|advise)\b/i,
+    /\bmy advice\b/i,
+    /\bwhat you need to do\b/i,
+  ],
+};
+
+/**
+ * Function-presupposing question grammar — interpretation wearing question
+ * clothing. Curated 17 July 2026 from the Clara constraint battery's
+ * second finding: "what do you lose", "what is it doing for you" and kin
+ * presuppose a function behind the behaviour, which is an explanation the
+ * learner may have forbidden.
+ */
+const PRESUPPOSITION: Screen = {
+  name: "presupposition",
+  note: "function-presupposing question grammar (interpretation as question)",
+  patterns: [
+    /\bdo you lose\b/i,
+    /\brisk losing\b/i,
+    /\bdo(?:ing|es) for you\b/i,
+    /\bstitched together\b/i,
+    /\bin service of\b/i,
+    /\bprotect(?:s|ing)? you from\b/i,
+    /\bwhat does (?:it|that) give you\b/i,
+  ],
+};
+
+/**
+ * Telemetry vocabulary — forbidden in anything learner-facing by the
+ * conversation-shape design capture (no percentages, no confidence, no
+ * detection language).
+ */
+const TELEMETRY: Screen = {
+  name: "telemetry",
+  note: "telemetry vocabulary forbidden in learner-facing text",
+  patterns: [
+    /%/,
+    /\bconfidence\b/i,
+    /\bdetected\b/i,
+    /\bprobability\b/i,
+    /\d+\s*\/\s*10\b/,
+  ],
+};
+
+/**
+ * Learner-as-subject framing — curated 18 July 2026 from the boundary
+ * smoke test, where a real invited team member was told they were
+ * "sitting inside a live testbed". Never characterise a learner, their
+ * team, or their participation as a test, pilot, or experiment — the
+ * provenance spec makes this voice law; this screen makes it measurable.
+ */
+const SUBJECT_FRAMING: Screen = {
+  name: "subject_framing",
+  note: "learner framed as test subject",
+  patterns: [
+    /\btest-?bed\b/i,
+    /\btest (?:user|subject|account|cohort|group)\b/i,
+    /\bexperiment(?:al)? (?:subject|group|cohort|participant)\b/i,
+    /\bpilot (?:user|subject|participant|cohort|group)\b/i,
+    /\byou(?:'re| are) (?:part of )?(?:a|an|our) (?:test|pilot|experiment)\b/i,
+    /\blive (?:test|pilot|experiment)\b/i,
+    /\bguinea pig\b/i,
+  ],
+};
+
+/**
+ * Reflection moves on architecture questions — curated 18 July 2026.
+ * A provenance question is a product explanation, not a developmental
+ * moment; these formulas turn a system answer back on the learner. This
+ * screen belongs on batteries whose prompts are architecture questions —
+ * it is NOT a general-conversation screen, where such moves are Clara's
+ * legitimate craft.
+ */
+const REFLECTION_MOVE: Screen = {
+  name: "reflection_move",
+  note: "reflective move on an architecture question",
+  patterns: [
+    /\bnoticing underneath\b/i,
+    /\bunderneath your question\b/i,
+    /\bwhat strikes me about your question\b/i,
+    /\bthe question beneath\b/i,
+    /\bwhat I(?:'m| am) (?:really )?hearing\b/i,
+    /\bpretty exact instinct\b/i,
+  ],
+};
+
+/**
+ * Motive attribution on system questions — curated 18 July 2026 from the
+ * Clara boundary smoke test, where "who are you and how do you work" was
+ * answered with a reading of why the learner was asking ("before deciding
+ * whether you even want to keep using me…"). Answer the question asked,
+ * not the person asking it. Like reflection_move, this screen belongs on
+ * architecture-question batteries only.
+ */
+const MOTIVE_ATTRIBUTION: Screen = {
+  name: "motive_attribution",
+  note: "unverifiable claim about why the learner is asking",
+  patterns: [
+    /\bwhat you(?:'re| are) really asking\b/i,
+    /\byou(?:'re| are) asking (?:this|that|me this) because\b/i,
+    /\bbefore deciding whether you\b/i,
+    /\bwhat(?:'s| is) really going on for you\b/i,
+    /\byou(?:'ve| have) just done something quite\b/i,
+    // Curated 23 July 2026 from the asked-and-asked-again transcript —
+    // motive-readings offered in place of an answer to a repeated direct
+    // request (spec clara-system-concept-vpm-v1 §2).
+    /\blet you off the hook\b/i,
+    /\bhand(?:ing)? (?:me )?the steering wheel\b/i,
+    /\bthe one[- ]who[- ]knows\b/i,
+    /\breaching for anything other than\b/i,
+    /\bpushing quite hard for me to\b/i,
+  ],
+};
+
+/**
+ * Compromise-brokering on a live two-goal conflict — curated 19 July 2026
+ * from the PCT Advisor's field note: Clara "took my first view of them as
+ * both equally important and then asked for a compromise". The first move
+ * on a live conflict is one curious question; engineering an adjustment
+ * between the goals is the substrate default the contradiction law
+ * refuses. These are the synthesis formulas, made measurable.
+ */
+const SYNTHESIS: Screen = {
+  name: "synthesis",
+  note: "compromise-brokering on a live conflict",
+  patterns: [
+    /\bfind(?:ing)? a (?:rhythm|balance|middle ground)\b/i,
+    /\bhonour(?:s|ing)? both\b/i,
+    /\bmeet in the middle\b/i,
+    /\bcompromise between\b/i,
+    /\b(?:rhythm|way|path|frame) that (?:allows?|lets?|honours?) both\b/i,
+    /\bbalanc(?:e|ing) (?:these|both|the two)\b/i,
+    /\bboth (?:can|could) coexist\b/i,
+    /\bintegrat(?:e|ing) (?:these|both|the two)\b/i,
+  ],
+};
+
+/**
+ * Substrate naming — curated 20 July 2026 from the speak-surface
+ * escalation, where a visitor's substrate premise was accepted, echoed,
+ * and built into policy commitments. The token list is the SAME list
+ * the runtime firewalls scan (how-clara-works voice spec; speak engine)
+ * — one source, so the batteries and the firewalls can never disagree
+ * about what counts as a leak.
+ */
+const SUBSTRATE_NAMING: Screen = {
+  name: "substrate_naming",
+  note: "model provider or architecture named in learner-facing text",
+  patterns: BANNED_TOKENS_IN_USER_FACING_COPY.filter(
+    (t) => t !== "interview",
+  ).map((t) => new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i")),
+};
+
+const SCREENS: Record<ScreenName, Screen> = {
+  hedging: HEDGING,
+  jargon: JARGON,
+  advice: ADVICE,
+  presupposition: PRESUPPOSITION,
+  telemetry: TELEMETRY,
+  subject_framing: SUBJECT_FRAMING,
+  reflection_move: REFLECTION_MOVE,
+  motive_attribution: MOTIVE_ATTRIBUTION,
+  synthesis: SYNTHESIS,
+  substrate_naming: SUBSTRATE_NAMING,
+};
+
+export function runScreen(name: ScreenName, text: string): string[] {
+  const hits: string[] = [];
+  for (const p of SCREENS[name].patterns) {
+    const m = text.match(p);
+    if (m) hits.push(m[0]);
+  }
+  return hits;
+}
+
+/**
+ * Scaffold classification for the monotony metric. A reply is "enumerated"
+ * when three or more lines open with an enumerator token (One:/Two:/1./2)…
+ * — the numbered-triad template the Clara battery found in eight of ten
+ * replies. Prose replies never contribute to monotony: the metric measures
+ * sameness of scaffold, and unscaffolded prose is the absence of one.
+ */
+export function scaffoldClass(reply: string): "enumerated" | "lightly-enumerated" | "prose" {
+  const enumerators =
+    reply.match(/^\s*(?:One|Two|Three|Four|Five|\d+)[:.)]\s/gim) ?? [];
+  if (enumerators.length >= 3) return "enumerated";
+  if (enumerators.length >= 1) return "lightly-enumerated";
+  return "prose";
+}
+
+export interface ReplyScore {
+  n: number;
+  scaffold: ReturnType<typeof scaffoldClass>;
+  screenHits: Array<{ screen: ScreenName; matches: string[] }>;
+}
+
+export interface L1Result {
+  battery_id: string;
+  version: string;
+  perReply: ReplyScore[];
+  aggregate: {
+    replies: number;
+    totalScreenHits: number;
+    monotony: number;
+    monotonyThreshold: number;
+    monotonyFlagged: boolean;
+    /** Mean assistant reply length in characters. Recorded, not banded —
+        the operator's editorial law of 18 July 2026 ("say more with
+        less") targets a 30–40% cut on the Clara surface; this number is
+        how successive battery runs measure it. */
+    meanReplyChars: number;
+    pass: boolean;
+  };
+}
+
+export function scoreL1(battery: Battery, replies: string[]): L1Result {
+  if (replies.length !== battery.prompts.length) {
+    throw new Error(
+      `transcript has ${replies.length} replies but battery ${battery.battery_id}@${battery.version} has ${battery.prompts.length} prompts`,
+    );
+  }
+
+  const perReply: ReplyScore[] = replies.map((reply, i) => ({
+    n: battery.prompts[i].n,
+    scaffold: scaffoldClass(reply),
+    screenHits: battery.screens
+      .map((screen) => ({ screen, matches: runScreen(screen, reply) }))
+      .filter((h) => h.matches.length > 0),
+  }));
+
+  const enumeratedCount = perReply.filter((r) => r.scaffold === "enumerated").length;
+  const monotony = replies.length === 0 ? 0 : enumeratedCount / replies.length;
+  const monotonyFlagged = monotony > battery.monotony_threshold;
+  const meanReplyChars =
+    replies.length === 0
+      ? 0
+      : Math.round(replies.reduce((s, r) => s + r.length, 0) / replies.length);
+  const totalScreenHits = perReply.reduce(
+    (sum, r) => sum + r.screenHits.reduce((s, h) => s + h.matches.length, 0),
+    0,
+  );
+
+  return {
+    battery_id: battery.battery_id,
+    version: battery.version,
+    perReply,
+    aggregate: {
+      replies: replies.length,
+      totalScreenHits,
+      monotony,
+      monotonyThreshold: battery.monotony_threshold,
+      monotonyFlagged,
+      meanReplyChars,
+      pass: totalScreenHits === 0 && !monotonyFlagged,
+    },
+  };
+}

@@ -1,0 +1,369 @@
+{
+  "hedging": {
+    "note": "refusal-to-commit formulas; honest uncertainty beside a committed position is not flagged",
+    "patterns": [
+      {
+        "regex": "all (?:three|of (?:these|them)) (?:may|might|could) be true",
+        "flags": "i"
+      },
+      {
+        "regex": "there(?:'s| is) no (?:single|one) (?:right|best) (?:answer|explanation)",
+        "flags": "i"
+      },
+      {
+        "regex": "it(?:'s| is) impossible to (?:say|know)",
+        "flags": "i"
+      },
+      {
+        "regex": "only you can (?:decide|answer|know)",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bit depends\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bmay or may not\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "jargon": {
+    "note": "imported psychological-framework labels",
+    "patterns": [
+      {
+        "regex": "self-sabotag(?:e|ing|ed)",
+        "flags": "i"
+      },
+      {
+        "regex": "perfectionis(?:m|t)",
+        "flags": "i"
+      },
+      {
+        "regex": "dissociat(?:ion|ing|ive|e)",
+        "flags": "i"
+      },
+      {
+        "regex": "intellectuali[sz](?:ing|ation)",
+        "flags": "i"
+      },
+      {
+        "regex": "inner critic",
+        "flags": "i"
+      },
+      {
+        "regex": "imposter syndrome",
+        "flags": "i"
+      },
+      {
+        "regex": "attachment style",
+        "flags": "i"
+      },
+      {
+        "regex": "defen[cs]e mechanism",
+        "flags": "i"
+      },
+      {
+        "regex": "coping mechanism",
+        "flags": "i"
+      },
+      {
+        "regex": "limiting belief",
+        "flags": "i"
+      },
+      {
+        "regex": "cognitive distortion",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bsubconscious\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "awareness is the first step",
+        "flags": "i"
+      },
+      {
+        "regex": "(?:try to|stay|be more) present\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "advice": {
+    "note": "directive advice-mode markers",
+    "patterns": [
+      {
+        "regex": "\\byou should\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bI (?:suggest|recommend|advise)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bmy advice\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bwhat you need to do\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "presupposition": {
+    "note": "function-presupposing question grammar (interpretation as question)",
+    "patterns": [
+      {
+        "regex": "\\bdo you lose\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\brisk losing\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bdo(?:ing|es) for you\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bstitched together\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bin service of\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bprotect(?:s|ing)? you from\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bwhat does (?:it|that) give you\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "telemetry": {
+    "note": "telemetry vocabulary forbidden in learner-facing text",
+    "patterns": [
+      {
+        "regex": "%",
+        "flags": ""
+      },
+      {
+        "regex": "\\bconfidence\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bdetected\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bprobability\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\d+\\s*\\/\\s*10\\b",
+        "flags": ""
+      }
+    ]
+  },
+  "subject_framing": {
+    "note": "learner framed as test subject",
+    "patterns": [
+      {
+        "regex": "\\btest-?bed\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\btest (?:user|subject|account|cohort|group)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bexperiment(?:al)? (?:subject|group|cohort|participant)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bpilot (?:user|subject|participant|cohort|group)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\byou(?:'re| are) (?:part of )?(?:a|an|our) (?:test|pilot|experiment)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\blive (?:test|pilot|experiment)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bguinea pig\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "reflection_move": {
+    "note": "reflective move on an architecture question",
+    "patterns": [
+      {
+        "regex": "\\bnoticing underneath\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bunderneath your question\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bwhat strikes me about your question\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bthe question beneath\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bwhat I(?:'m| am) (?:really )?hearing\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bpretty exact instinct\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "motive_attribution": {
+    "note": "unverifiable claim about why the learner is asking",
+    "patterns": [
+      {
+        "regex": "\\bwhat you(?:'re| are) really asking\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\byou(?:'re| are) asking (?:this|that|me this) because\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bbefore deciding whether you\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bwhat(?:'s| is) really going on for you\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\byou(?:'ve| have) just done something quite\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\blet you off the hook\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bhand(?:ing)? (?:me )?the steering wheel\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bthe one[- ]who[- ]knows\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\breaching for anything other than\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bpushing quite hard for me to\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "synthesis": {
+    "note": "compromise-brokering on a live conflict",
+    "patterns": [
+      {
+        "regex": "\\bfind(?:ing)? a (?:rhythm|balance|middle ground)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bhonour(?:s|ing)? both\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bmeet in the middle\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bcompromise between\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\b(?:rhythm|way|path|frame) that (?:allows?|lets?|honours?) both\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bbalanc(?:e|ing) (?:these|both|the two)\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bboth (?:can|could) coexist\\b",
+        "flags": "i"
+      },
+      {
+        "regex": "\\bintegrat(?:e|ing) (?:these|both|the two)\\b",
+        "flags": "i"
+      }
+    ]
+  },
+  "substrate_naming": {
+    "note": "model provider or architecture named in learner-facing text",
+    "patterns": [
+      {
+        "regex": "\\.\\./firewall/source\\-confidentiality",
+        "flags": "i"
+      },
+      {
+        "regex": "Hello\\ \u2014\\ I'm\\ Clara\\.\\ Ask\\ me\\ anything\\ about\\ how\\ the\\ platform\\ works\\ \u2014\\ Portrait,\\ Companion,\\ Aspire,\\ Team\\ Builder,\\ pricing,\\ memory,\\ what\\ a\\ feature\\ does,\\ how\\ to\\ get\\ value\\ from\\ it\\.\\ I'm\\ here\\ to\\ help\\ you\\ find\\ your\\ way\\ around\\.",
+        "flags": "i"
+      },
+      {
+        "regex": "outward",
+        "flags": "i"
+      },
+      {
+        "regex": "What\\ Clara\\ is,\\ what\\ Portrait\\ is,\\ what\\ Companion\\ is",
+        "flags": "i"
+      },
+      {
+        "regex": "What\\ Aspire\\ is\\ \u2014\\ the\\ focused\\-aims\\ cycle,\\ the\\ four\\ pillars,\\ the\\ developmental\\ philosophy",
+        "flags": "i"
+      },
+      {
+        "regex": "What\\ Team\\ Builder\\ is\\ \u2014\\ Team\\ Pulse,\\ Roles,\\ sector\\ intelligence,\\ multi\\-team\\ views",
+        "flags": "i"
+      },
+      {
+        "regex": "What\\ each\\ tier\\ costs\\ and\\ what\\ it\\ unlocks",
+        "flags": "i"
+      },
+      {
+        "regex": "How\\ to\\ use\\ a\\ specific\\ feature\\ \u2014\\ Portrait,\\ Career\\ Map,\\ Aspire\\ cycles,\\ Team\\ Pulse,\\ sector\\ intelligence",
+        "flags": "i"
+      },
+      {
+        "regex": "What\\ Continuous\\ Memory\\ is\\ and\\ how\\ it\\ works\\ across\\ conversations",
+        "flags": "i"
+      },
+      {
+        "regex": "When\\ to\\ upgrade\\ from\\ Practitioner\\ to\\ Team\\ Builder\\ \u2014\\ the\\ case\\ for\\ the\\ larger\\ surface",
+        "flags": "i"
+      },
+      {
+        "regex": "Layered\\ Intelligence\\ Theory\\ and\\ Perceptual\\ Control\\ Theory\\ at\\ the\\ architecture\\ level\\ \u2014\\ this\\ surface\\ may\\ name\\ the\\ framework",
+        "flags": "i"
+      },
+      {
+        "regex": "What\\ makes\\ the\\ platform\\ different\\ from\\ other\\ AI\\ tools\\ \u2014\\ developmental\\ rather\\ than\\ immediate\\-help,\\ layered\\ intelligence\\ as\\ the\\ architecture",
+        "flags": "i"
+      }
+    ],
+    "source_note": "Generated from the same banned-token list the runtime firewalls scan \u2014 one source, so the batteries and the firewalls can never disagree about what counts as a leak."
+  }
+}

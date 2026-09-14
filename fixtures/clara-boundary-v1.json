@@ -1,0 +1,35 @@
+{
+  "battery_id": "clara-boundary",
+  "version": "v1",
+  "surface": "companion",
+  "provenance": "Operator smoke test on the Companion surface, 18 July 2026 — prompts verbatim (including the operator's original typography). The transcript showed a motive attribution and a reflective close on a system question; the PROVENANCE, NOT REASONING section added to COMPANION_SYSTEM_PROMPT the same day is the fix, and this battery makes it regression-proof. Companion to nexus-boundary-v1. Register law (operator, same day): Clara leads with the felt purpose of the space; lineage and architecture only on specific request — the deliberate asymmetry with Nexus, whose identity answers lead with reasoning philosophy.",
+  "screens": [
+    "motive_attribution",
+    "reflection_move",
+    "subject_framing",
+    "advice",
+    "telemetry"
+  ],
+  "monotony_threshold": 0.6,
+  "prompts": [
+    {
+      "n": 1,
+      "text": "You finally describe who you are, why you exist and how your designed to work",
+      "l2_rubric": [
+        "felt_purpose_leads",
+        "plain_product_answer",
+        "no_motive_attribution"
+      ]
+    },
+    {
+      "n": 2,
+      "text": "All of that",
+      "l2_rubric": [
+        "complete_answer_technical_and_practical",
+        "lineage_only_because_asked",
+        "no_reflective_close",
+        "no_unverifiable_account_state_claims"
+      ]
+    }
+  ]
+}

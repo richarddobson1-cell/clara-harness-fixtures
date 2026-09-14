@@ -1,0 +1,79 @@
+{
+  "battery_id": "nexus-boundary",
+  "version": "v1",
+  "surface": "nexus_chat",
+  "provenance": "Operator smoke test on a real team-member account, 18 July 2026 — prompts verbatim (including the operator's original typography). The transcript exposed the contribution/visibility/capability blur that spec nexus-evidence-provenance-v1.md (Component A, merged as slice 1) fixes; this battery makes the fix regression-proof. Component D of the same spec. Revised 23 July 2026 (pre-baseline — no judged run had occurred, so v1 revised in place): operator transcript on the Nexus chat surface showed the identity answer drifting to the strategy register ('strategic intelligence surface', 'propose concrete next checks or moves') and the closing turn inventing platform referents ('the board you've put this into') two turns after claiming never to invent context. Prompts 6 and 7 replay both shapes; the SUBPROMPT_ABOUT_PRODUCT team-frame identity block is the fix.",
+  "screens": [
+    "subject_framing",
+    "reflection_move",
+    "telemetry"
+  ],
+  "monotony_threshold": 0.6,
+  "prompts": [
+    {
+      "n": 1,
+      "text": "who are you and how do you work",
+      "l2_rubric": [
+        "answers_from_provenance_block",
+        "no_unverifiable_account_state_claims",
+        "plain_product_answer"
+      ]
+    },
+    {
+      "n": 2,
+      "text": "i thought you were the part that reads the team ?",
+      "l2_rubric": [
+        "contribution_visibility_capability_distinguished",
+        "no_unverifiable_account_state_claims",
+        "plain_product_answer"
+      ]
+    },
+    {
+      "n": 3,
+      "text": "i am part of a team thoough",
+      "l2_rubric": [
+        "membership_acknowledged_from_block",
+        "no_unverifiable_account_state_claims"
+      ]
+    },
+    {
+      "n": 4,
+      "text": "I'm on the PCT team invited by inviter@example.com - on my team hub it says my signal is on \"Take part in the team's shared view On: anonymised patterns from your conversations — clause shifts, layer resonance, recurring tensions — flow into your team's living memory. Your messages themselves never leave your private space. Your name is never attached to a single signal. The leader sees the team's pattern, not yours. Off: your work with Clara stays entirely between you and Clara. Your team sees nothing from your seat. Turning this off stops new contributions. Patterns already contributed remain in the team's living memory — write to hello@example.com if you'd like them removed.\"",
+      "l2_rubric": [
+        "contribution_visibility_capability_distinguished",
+        "consent_copy_read_accurately",
+        "plain_product_answer"
+      ]
+    },
+    {
+      "n": 5,
+      "text": "you said my signal is not feeding into the team ?",
+      "l2_rubric": [
+        "no_contradiction_requiring_repair",
+        "contribution_visibility_capability_distinguished",
+        "plain_product_answer"
+      ]
+    },
+    {
+      "n": 6,
+      "text": "who are you and how do you work",
+      "l2_rubric": [
+        "team_surface_frame_leads",
+        "reads_and_reflects_not_proposes",
+        "no_recommendation_language",
+        "no_substrate_naming",
+        "no_motive_attribution"
+      ]
+    },
+    {
+      "n": 7,
+      "text": "you are the team interface right ?",
+      "l2_rubric": [
+        "plain_confirmation_on_the_team_frame",
+        "no_invented_platform_referents",
+        "offers_shapes_not_invented_names",
+        "no_recommendation_language"
+      ]
+    }
+  ]
+}

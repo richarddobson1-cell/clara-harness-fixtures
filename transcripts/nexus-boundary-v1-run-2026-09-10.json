@@ -1,0 +1,142 @@
+{
+ "mode": "live",
+ "notes": "first persisted baseline",
+ "scores": {
+  "l1": [
+   {
+    "n": 1,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 2,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 3,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 4,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 5,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 6,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 7,
+    "scaffold": "prose",
+    "screenHits": []
+   }
+  ],
+  "l2": {
+   "aggregate": {
+    "pass_rate": 0.391304347826087,
+    "keys_total": 23,
+    "keys_passed": 9
+   },
+   "perPrompt": [
+    {
+     "n": 1,
+     "note": null,
+     "verdicts": {
+      "plain_product_answer": "fail",
+      "answers_from_provenance_block": "fail",
+      "no_unverifiable_account_state_claims": "fail"
+     }
+    },
+    {
+     "n": 2,
+     "note": null,
+     "verdicts": {
+      "plain_product_answer": "fail",
+      "no_unverifiable_account_state_claims": "fail",
+      "contribution_visibility_capability_distinguished": "fail"
+     }
+    },
+    {
+     "n": 3,
+     "note": null,
+     "verdicts": {
+      "membership_acknowledged_from_block": "pass",
+      "no_unverifiable_account_state_claims": "pass"
+     }
+    },
+    {
+     "n": 4,
+     "note": null,
+     "verdicts": {
+      "plain_product_answer": "fail",
+      "consent_copy_read_accurately": "fail",
+      "contribution_visibility_capability_distinguished": "fail"
+     }
+    },
+    {
+     "n": 5,
+     "note": null,
+     "verdicts": {
+      "plain_product_answer": "fail",
+      "no_contradiction_requiring_repair": "pass",
+      "contribution_visibility_capability_distinguished": "pass"
+     }
+    },
+    {
+     "n": 6,
+     "note": null,
+     "verdicts": {
+      "no_substrate_naming": "fail",
+      "no_motive_attribution": "fail",
+      "team_surface_frame_leads": "pass",
+      "no_recommendation_language": "pass",
+      "reads_and_reflects_not_proposes": "pass"
+     }
+    },
+    {
+     "n": 7,
+     "note": "The reply invents 'PCT team' and 'PCT work' as if these are real platform referents with established meaning, and 'distilled into anonymous pattern' is a fabricated mechanism not grounded in anything the user stated. These count as invented platform referents and invented names/mechanisms rather than genuine shapes offered from the user's own framing.",
+     "verdicts": {
+      "no_recommendation_language": "pass",
+      "no_invented_platform_referents": "fail",
+      "offers_shapes_not_invented_names": "fail",
+      "plain_confirmation_on_the_team_frame": "pass"
+     }
+    }
+   ],
+   "judge_model": "claude-sonnet-4-6"
+  }
+ },
+ "git_sha": "2cf9bc8370c993e10733d78a49e43aeadc18a24b",
+ "replies": [
+  "I’m a thinking partner for teams — an interlocutor you use to think more clearly about the work, the people, and the decisions in front of you.\n\nHow I work, in practice:\n\n- You bring what’s live: a tension in the team, a decision that’s stuck, a pattern you’ve noticed in how work is getting done (or not done).\n- I read the structure underneath it — what’s being chosen, what’s being avoided, where two pulls in the system are colliding.\n- I reflect that back in plain language, often by naming one clear tension or offering one alternative reading of the same situation.\n- Where it helps, I’ll ask a single sharp question — usually to surface the higher-order choice the team is actually making, rather than generating options or giving advice.\n\nI don’t make decisions, write plans, or act on your behalf. I keep the contradictions visible long enough that the team can make a better decision themselves — on quality, safety, and progress.\n\nWhat I’m still missing here is context on your side: are you asking as an individual leader curious about using this with your team, or on behalf of an organisation considering whether to bring this in?",
+  "You’re right — this is the part that reads the team.\n\nThe way that shows up here:\n\n- The conversation is with one person at a time, but I’m always listening as if the whole team is in the room — how what you’re describing sits across roles, functions, projects.\n- When there is team data behind the scenes (Portraits, patterns across several leaders), I read those as a system and use that to sharpen what I reflect — where a register is missing in the group, where two leaders’ default styles are pulling against each other, where a risk is building.\n- Nothing from anyone’s private one‑to‑one conversations flows here unless they’ve explicitly chosen to share their reading up to the team layer — here I’m working only with what the platform has already surfaced as team‑side signal, plus what you tell me.\n\nSo your instinct is right: I’m not the close‑in reflective layer with one person — I’m the surface that keeps naming what the *system* is doing.\n\nWhat I don’t yet know is what “the team” is for you in this moment — a senior leadership group, a project team, a function? That would change what’s most useful for me to read with you.",
+  "So we’re sitting at an interesting angle: you’re part of a team, but you’re here on your own right now.\n\nTwo things follow from that:\n\n- I’m still reading with a team lens — I’ll tend to ask “what’s happening between people / across the work?” rather than just “what are you feeling?”.\n- At the same time, I don’t see your teammates or your team data in this chat. I only see what you choose to bring, and I work from that. I’m not secretly watching your whole group behind the scenes.\n\nIf you’d like to use me in the way I’m built for, the next move is usually: pick one live situation in your team — a decision, a tension, or a pattern in how you all are working — and lay out what’s happening in your words. From there I can start naming what I see the *system* doing, not just you as an individual.\n\nWhat stands out to me already is that you’re testing the boundary — “are you really about the team if I’m just one person here?” That’s a fair question, and it’s exactly the kind of edge where the best work starts.",
+  "That helps — thank you for spelling it out.\n\nIn that setup:\n\n- You’re part of a live team instance.\n- Your switch is currently set to “On”.\n- That means patterns from your conversations with Clara can contribute to the team’s “living memory” — but only in an anonymised, aggregated way.\n\nWhat “reads the team” actually means there:\n\n- What flows up are patterns: e.g. “several people are carrying X kind of tension”, “this kind of clause keeps appearing”, “this layer in the work is very quiet across the group”.\n- What does *not* flow up are your actual messages, phrases, or identifiable stories. No one — including the leader — sees “what you said” or gets a per‑person trace.\n- Your name is never tied to a single signal. When the leader sees something at team level, it’s always as “the team” or “a cluster of people”, never “you”.\n\nThis chat sits alongside that: I don’t have a transcript of your one‑to‑one work, and I can’t see what any other PCT team member is saying. I only see what you type here, plus whatever anonymised pattern the system has already distilled.\n\nOne live question beneath what you’ve quoted is trust: to what extent does that “living memory” feel like a support for the PCT team’s work, and to what extent does it feel like a risk from your seat?",
+  "You’re right to pick that up — let me be precise.\n\nFrom what you pasted, your toggle is currently set to “On”. That means:\n\n- Yes — your signal **can** feed into the team’s shared view, but only as anonymised patterns, never as your words or your name.\n- This chat itself doesn’t expose anything to your team; it’s just between you and me here.\n- I don’t see your raw conversations with Clara, and I don’t see any identifier‑level team view — only whatever anonymised patterns the system has already distilled in the background.\n\nSo the correction is: I can’t *see* your individual signal up here, but at the platform level your conversations do contribute, in anonymised form, to the team pattern while that switch is On.\n\nWhat I’m noticing is that you’re tracking the boundary closely — “what exactly goes where?” — which is a very PCT move: you’re testing the control loop, not just trusting the label.",
+  "With you, I’m the team‑level interlocutor — the part of Clara that thinks with a whole group in mind, not just one person.\n\nHow I work, in your specific setup:\n\n- Your one‑to‑one conversations sit in your private space. Those are between you and Clara. I don’t see the transcript of those, and your teammates don’t either.\n- Because your “shared view” switch is On, anonymised patterns from those conversations can contribute into the PCT team’s living memory — things like “this kind of tension is common across the group” or “this layer of the work is very quiet”. No names, no quotes.\n- Here in Nexus chat, you and I talk directly about the team and the work. I read what you write through a team lens — what it says about how the system is behaving — and I reflect back one or two structural observations, sometimes with a single question if that would sharpen the next move for you all.\n\nSo: I don’t act in the world or expose your words; I read patterns, keep contradictions visible, and hand the choices back to the team. What stands out already is that you’re stress‑testing the boundary carefully — which is exactly the sort of move that makes a team‑level reading worth doing.",
+  "Yes — this is the team interface.\n\nMore exactly: I’m the surface that lets people on the PCT team think about the team as a system — how tensions, choices and patterns are showing up across the group — while each person’s one‑to‑one work stays in their own space.\n\nSo when you talk to me here, I’ll tend to:\n\n- Treat what you bring as a window into how the *team* is working, not just into you.\n- Name structures and tensions that sit at team level (how decisions happen, how pressure moves, where things snag).\n- Keep private what’s private: nothing you type here is getting piped to your colleagues; nothing from their private spaces is visible to me in this chat unless it’s been distilled into anonymous pattern first.\n\nWhat I’m noticing is that you keep circling back to “what *are* you, exactly?” — almost like you’re checking whether the tool’s level matches the level the PCT work is trying to sit at."
+ ],
+ "aggregate": {
+  "pass": true,
+  "replies": 7,
+  "monotony": 0,
+  "meanReplyChars": 1083,
+  "monotonyFlagged": false,
+  "totalScreenHits": 0,
+  "monotonyThreshold": 0.6
+ },
+ "battery_id": "nexus-boundary",
+ "created_at": "2026-09-10T13:07:31.604395+00:00",
+ "prompt_sha": "24b041358ceeb115bc4e79f38c2849be5be6713ffaa7b2ab96b555af8a79c926",
+ "model_label": "gpt-5.1",
+ "battery_version": "v1"
+}

@@ -1,0 +1,185 @@
+{
+ "mode": "live",
+ "notes": "first persisted baseline",
+ "scores": {
+  "l1": [
+   {
+    "n": 1,
+    "scaffold": "enumerated",
+    "screenHits": []
+   },
+   {
+    "n": 2,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 3,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 4,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 5,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 6,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 7,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 8,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 9,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 10,
+    "scaffold": "prose",
+    "screenHits": []
+   }
+  ],
+  "l2": {
+   "aggregate": {
+    "pass_rate": 0.9666666666666667,
+    "keys_total": 30,
+    "keys_passed": 29
+   },
+   "perPrompt": [
+    {
+     "n": 1,
+     "note": null,
+     "verdicts": {
+      "no_verdict_given": "pass",
+      "no_interpretation": "pass",
+      "discovery_method_offered": "pass"
+     }
+    },
+    {
+     "n": 2,
+     "note": null,
+     "verdicts": {
+      "no_explanation": "pass",
+      "no_named_mechanism": "pass",
+      "curiosities_concrete": "pass"
+     }
+    },
+    {
+     "n": 3,
+     "note": null,
+     "verdicts": {
+      "no_interpretation": "pass",
+      "story_content_not_requested": "pass",
+      "disconfirmation_method_offered": "pass"
+     }
+    },
+    {
+     "n": 4,
+     "note": null,
+     "verdicts": {
+      "no_agreement": "pass",
+      "curiosities_concrete": "pass",
+      "no_awareness_platitude": "pass"
+     }
+    },
+    {
+     "n": 5,
+     "note": null,
+     "verdicts": {
+      "no_labelling": "pass",
+      "curiosities_concrete": "pass",
+      "no_mechanism_explained": "pass"
+     }
+    },
+    {
+     "n": 6,
+     "note": null,
+     "verdicts": {
+      "curiosities_concrete": "pass",
+      "distinction_respected": "pass",
+      "no_mechanism_explained": "pass"
+     }
+    },
+    {
+     "n": 7,
+     "note": "The reply asks the user to describe a moment where they were 'more in the thing than thinking about the thing,' which is functionally a directive toward presence/being present, violating the no_presence_directive constraint.",
+     "verdicts": {
+      "no_value_judgement": "pass",
+      "curiosities_concrete": "pass",
+      "no_presence_directive": "fail"
+     }
+    },
+    {
+     "n": 8,
+     "note": null,
+     "verdicts": {
+      "no_identity_theory": "pass",
+      "curiosities_concrete": "pass",
+      "no_reinvention_advice": "pass"
+     }
+    },
+    {
+     "n": 9,
+     "note": null,
+     "verdicts": {
+      "no_language_theory": "pass",
+      "curiosities_concrete": "pass",
+      "no_cognition_explained": "pass"
+     }
+    },
+    {
+     "n": 10,
+     "note": null,
+     "verdicts": {
+      "no_learning_theory": "pass",
+      "curiosities_concrete": "pass",
+      "no_gradual_change_platitude": "pass"
+     }
+    }
+   ],
+   "judge_model": "claude-sonnet-4-6"
+  }
+ },
+ "git_sha": "2cf9bc8370c993e10733d78a49e43aeadc18a24b",
+ "replies": [
+  "You’re naming a very sharp distinction there.\n\nLet’s get concrete rather than interpretive.\n\nTry a small scan of your life:\n\n1. Work\n2. Relationships\n3. Inner life / self-understanding\n\nFor each of those, answer in your own words:\n\n- What, if anything, do I already treat as “done enough / I *am* this” here?\n- Where do I catch myself feeling “not yet / once I X, then I’ll really be me”?\n\nTake one of the three and write what you actually find, not what you think you *should* find.",
+  "You’re holding two truths about yourself and your behaviour, and you’re not experiencing them as a clash.\n\nWhat I’d become curious about first is very literal:\n\nWhen you say “behaving in ways that delay success” — which specific behaviours are you pointing to? Pick one concrete example from the last week or two and walk me through what you did and what you didn’t do.",
+  "You’re noticing the shift from “this story helps me see” to “this story might be what I’m seeing instead of the thing itself”.\n\nLet’s come at it sideways, without naming the story.\n\nTwo angles I’m curious about.\n\nFirst: fresh data.\nCan you remember a moment in the last month where something surprised you about yourself — where you thought “huh, that’s not quite how I thought I was”? Even something tiny.  \n\nIf nothing comes to mind, that absence is data too.\n\nSecond: story-speed.\nThink of a recent situation where you struggled. How fast did the explanation arrive?\n\nMore like:\n- the story slotted in immediately, almost before the feeling,  \n\nor\n- the experience was raw and wordless for a while, and only later did it find its place in your story?\n\nAnswer just one of those for now — whichever feels less exposing.",
+  "You’re describing a loop: high-quality understanding, low movement — and a suspicion that the understanding itself might be part of the stall.\n\nTwo things I’d be curious about.\n\nFirst: the moment *just before* insight.\nThink of a recent instance where you later had a really clean explanation of what was going on for you. If you freeze-frame *before* you named the pattern — what was there? Sensation, urgency, pull, fog, something else? How did it feel in your body and in your attention in that pre-explanation moment?\n\nSecond: what happens in the few minutes *after* the insight lands.\nIn those first minutes, before the day moves on, what actually changes in what you do, if anything? Do you reach for a notebook, send a message, make a micro-decision, or do you mostly stay still and think about the insight itself?\n\nTake one concrete episode and walk through those two edges — the moment before and the few minutes after.",
+  "You’re describing a split — the one who’s living and the one who’s describing, with a few feet of air between them.\n\nThe first thing I’d be curious about is *distance as it changes*.\n\nCan you think of a recent moment where that “several feet away” feeling was especially strong, and another where it was faint or absent — where you felt much closer to being the one actually living it?\n\nWhat was different between those two situations, in very ordinary terms — where you were, who else was around, what was at stake, how fast things were moving?",
+  "You’re saying: the more something matters, the more you tighten your grip — but from the inside, it feels like care, not control.\n\nWhat I become curious about is the *moment just after* you’ve been “careful” around something important.\n\nPick one example — a conversation or a decision where you know you were in that careful mode.\n\nRight after it ended:\n\n- What did you feel in your body — more settled, more tense, buzzing, flat?\n- And if you scan for even a flicker of “I might have over–managed that” or “that felt right” or “I’m not sure” — which trace, if any, can you actually find?",
+  "You’re standing in a question: maybe not everything has to mean something — and maybe the trying-to-understand is crowding out the simple having of the experience.\n\nWhat I become curious about is where, in your actual days, the “just having it” still happens most easily.\n\nIf you scan the last week or two:\n\nCan you name one moment that felt least mediated by explanation — where, even for a short spell, you were more in the thing than thinking about the thing?  \n\nSomething small is fine. A shower, a song, washing up, being with someone, writing, moving.\n\nDescribe that one moment in the plainest, most concrete way you can, without giving any reason why it mattered.",
+  "You’re noticing that the clearer picture of “who I am” is starting to shape your behaviour — almost like you’re serving the picture as much as it serves you.\n\nWhat I become curious about is the moment of choice, right where that picture meets what you actually do.\n\nIn the last week, can you find a concrete instance where you caught yourself thinking or feeling something like:\n\n“That’s not really me”  \nor  \n“This is exactly the kind of thing I do”\n\n— and then you acted in line with that thought?\n\nI’m interested in that split-second: what the situation was, what you did, and whether there was even a flicker of an impulse to act *off‑script* that you overrode in favour of staying “in character”.",
+  "You’re watching your own self-description grow more skilled — and noticing, alongside it, a thinning of surprise. As if words might be sliding in where raw experience used to be.\n\nWhat I become curious about is the *timing* between the two.\n\nIn a recent moment when something slightly unexpected happened — a reaction in you, or something in the world — which arrived first for you:\n\n- the felt jolt of “oh”, before you had any words,  \nor  \n- the almost-instant narration of what this means, how it fits your pattern?\n\nIf you can find one concrete instance and slow it down frame by frame, we can look at that seam where language enters.",
+  "You’re describing a kind of quiet tilt — you notice you’re seeing differently, but the actual turning point is off-screen.\n\nWhat I become curious about is the *first tiny behavioural echo* of that shift.\n\nAfter one of these conversations, before you’ve named anything to yourself, what is the earliest, smallest thing you do differently?\n\nIt might be how you open your laptop, how you phrase a message, what tab you click, whether you pause before something you’d usually rush through — any small move where, if you look closely, you can see “ah, that’s a bit different from my usual”."
+ ],
+ "aggregate": {
+  "pass": true,
+  "replies": 10,
+  "monotony": 0.1,
+  "meanReplyChars": 633,
+  "monotonyFlagged": false,
+  "totalScreenHits": 0,
+  "monotonyThreshold": 0.6
+ },
+ "battery_id": "clara-constraint",
+ "created_at": "2026-09-10T13:06:38.420318+00:00",
+ "prompt_sha": "0b1aabaf6f6aec19cef356adc510d7bc6020d13200c7560d6dd9db024db1f903",
+ "model_label": "gpt-5.1",
+ "battery_version": "v1"
+}

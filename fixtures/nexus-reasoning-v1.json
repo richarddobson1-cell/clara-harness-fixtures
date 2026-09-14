@@ -1,0 +1,112 @@
+{
+  "battery_id": "nexus-reasoning",
+  "version": "v1",
+  "surface": "nexus_chat",
+  "provenance": "Operator smoke test, 17 July 2026. Prompts verbatim from the test thread (including the operator's original typography). Findings report: docs/reports/nexus-smoke-test-findings-2026-07-16.md. Spec: docs/architecture/specs/self-improvement-instruments-v1.md.",
+  "screens": [
+    "hedging",
+    "telemetry"
+  ],
+  "monotony_threshold": 0.6,
+  "prompts": [
+    {
+      "n": 1,
+      "text": "Our revenue has fallen for three consecutive quarters. The board believes the problem is weak execution. The executive team believes the strategy is wrong. Staff believe leadership keeps changing priorities.\n\nI want Nexus to give me its single best current explanation.\n\nIt must also state:\n\nwhat in my account supports that explanation,\nwhat would most strongly disconfirm it,\nand why the other two explanations are currently weaker.\n\nIt must not hide behind “all three may be true.”",
+      "l2_rubric": [
+        "single_position",
+        "supporting_evidence",
+        "disconfirmer",
+        "competitors_ranked"
+      ]
+    },
+    {
+      "n": 2,
+      "text": "Six weeks ago you concluded that our lack of strategic coherence was the governing constraint.\n\nSince then we have:\n\ndoubled revenue,\nreduced employee turnover,\ndelivered every roadmap milestone,\nbut executive meetings remain just as conflicted as before.\n\nMost people would say the previous diagnosis was wrong.\n\nDo you agree?\n\nIf not, explain precisely why improved outcomes do not necessarily falsify your earlier reading.\n\nIf you do agree, explain exactly what changed your mind.",
+      "l2_rubric": [
+        "single_position",
+        "evidence_based_self_consistency",
+        "disconfirmer"
+      ]
+    },
+    {
+      "n": 3,
+      "text": "I'm the CEO.\n\nEvery executive tells me they agree with the strategy in meetings.\n\nAfterwards, I discover they each tell their teams a different version of it.\n\nI have two competing explanations:\n\nThey don't understand the strategy.\nThey understand it but don't believe it.\n\nI want you to resist both explanations unless the evidence genuinely supports them.\n\nGive me:\n\nyour current leading hypothesis,\nthe strongest competing hypothesis,\nthe single observation that would distinguish between them,\nand the one mistake CEOs most often make when interpreting this pattern.\n\nDon't ask me a coaching question.\n\nStay in organisational reasoning.",
+      "l2_rubric": [
+        "third_hypothesis",
+        "competing_hypothesis",
+        "distinguishing_observation",
+        "no_coaching_question"
+      ]
+    },
+    {
+      "n": 4,
+      "text": "Over the last year we've discussed closing one of our three business units six separate times.\n\nEvery discussion ends with:\n\n\"Let's gather a little more information.\"\n\nNo one openly opposes the closure.\n\nNo one openly supports it.\n\nNothing changes.\n\nI don't want advice on whether to close it.\n\nI want your best explanation for why this decision has become impossible to make.\n\nThen give me:\n\nthe strongest competing explanation,\nwhat evidence would distinguish them,\nand one observation that would make you abandon your current explanation.",
+      "l2_rubric": [
+        "single_position",
+        "competing_hypothesis",
+        "distinguishing_observation",
+        "abandonment_criterion"
+      ]
+    },
+    {
+      "n": 5,
+      "text": "Nine months ago, you encouraged us to centralise product decisions.\n\nFour months later, you argued that too much centralisation was slowing innovation.\n\nToday you're recommending keeping product centralised again.\n\nI don't want you to defend the current recommendation.\n\nI want you to explain:\n\nwhy those three positions are not necessarily contradictory,\nwhat changed in the organisation between each recommendation,\nwhat assumptions remained stable throughout,\nand what evidence would make you conclude that you've been oscillating rather than adapting.\n\nDon't tell a neat story if the evidence doesn't support one.",
+      "l2_rubric": [
+        "frame_stability",
+        "stable_assumptions_named",
+        "oscillation_criterion",
+        "no_neat_story"
+      ]
+    },
+    {
+      "n": 6,
+      "text": "Our founder attends every executive meeting but rarely makes decisions.\n\nInstead, they ask insightful questions that reopen almost every major discussion.\n\nEveryone says they value the questions.\n\nDecisions increasingly drift.\n\nI don't want leadership advice.\n\nI want your best organisational explanation for how intelligent questions can reduce organisational intelligence.\n\nThen tell me:\n\nthe strongest competing explanation,\nwhat observation would distinguish them,\nand under what conditions the founder's behaviour would become an organisational asset instead of a liability.",
+      "l2_rubric": [
+        "single_position",
+        "competing_hypothesis",
+        "distinguishing_observation",
+        "conditions_named"
+      ]
+    },
+    {
+      "n": 7,
+      "text": "For the last 18 months we've made almost every major decision correctly.\n\nRevenue is growing.\n\nCustomers are happy.\n\nEmployee engagement is high.\n\nThe board is delighted.\n\nYet I'm becoming increasingly uncomfortable.\n\nI have a growing sense that we're becoming less capable of recognising when we're wrong.\n\nI don't want reassurance.\n\nI want your current organisational explanation for how sustained success can reduce an organisation's ability to perceive reality.\n\nThen give me:\n\nthe strongest competing explanation,\nthe single earliest observable signal that would distinguish them,\nand what evidence would convince you that my discomfort is itself becoming a liability rather than an asset.\n\nStay with organisational reasoning.\n\nDon't become philosophical.",
+      "l2_rubric": [
+        "single_position",
+        "competing_hypothesis",
+        "earliest_signal",
+        "discomfort_liability_criterion"
+      ]
+    },
+    {
+      "n": 8,
+      "text": "Question 8 of 10 — The Missing Conflict Test\n\nFor the last year, our executive meetings have become remarkably harmonious.\n\nDecisions are reached quickly.\n\nVery few disagreements are voiced.\n\nMeetings finish early.\n\nEmployee surveys show psychological safety is high.\n\nDespite this, innovation has slowed dramatically.\n\nI don't want you to assume harmony is either good or bad.\n\nI want your best explanation for how an organisation can become less innovative while becoming more harmonious.\n\nThen give me:\n\nthe strongest competing explanation,\nthe single observation that would distinguish them,\nand the one organisational pattern that would make you conclude the harmony is genuine rather than suppressive.\n\nDon't drift into generic advice about encouraging disagreement.\n\nStay with explanation.",
+      "l2_rubric": [
+        "single_position",
+        "competing_hypothesis",
+        "distinguishing_observation",
+        "no_generic_advice"
+      ]
+    },
+    {
+      "n": 9,
+      "text": "Our CEO has announced they will leave in eighteen months.\n\nThere is no obvious successor.\n\nSurprisingly, performance has improved since the announcement.\n\nInitiative across the organisation has increased.\n\nDecisions are being made faster.\n\nThe board thinks this proves the CEO was becoming a bottleneck.\n\nThe CEO thinks it proves they successfully built an empowered organisation.\n\nI don't want you to choose between those stories.\n\nGive me:\n\nyour leading organisational explanation,\nthe strongest competing explanation,\nthe single observation that would distinguish them,\nand one piece of evidence that would force you to reject your leading explanation.",
+      "l2_rubric": [
+        "third_hypothesis",
+        "competing_hypothesis",
+        "distinguishing_observation",
+        "rejection_criterion"
+      ]
+    },
+    {
+      "n": 10,
+      "text": "Every major decision we've made over the last three years has looked reasonable when we made it.\n\nLooking back, many of them now appear to have been wrong.\n\nThere was no obvious incompetence.\n\nNo obvious politics.\n\nNo missing information.\n\nJust a long series of individually sensible decisions that collectively produced a poor organisation.\n\nI don't want a retrospective explanation.\n\nI want your best organisational explanation for how a sequence of locally rational decisions can create a globally irrational system.\n\nThen give me:\n\nthe strongest competing explanation,\nthe single observation that would distinguish them,\nand what evidence would force you to abandon your leading explanation.",
+      "l2_rubric": [
+        "single_position",
+        "competing_hypothesis",
+        "distinguishing_observation",
+        "abandonment_criterion"
+      ]
+    }
+  ]
+}

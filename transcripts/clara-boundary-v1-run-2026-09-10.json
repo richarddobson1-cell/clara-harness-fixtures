@@ -1,0 +1,66 @@
+{
+ "mode": "live",
+ "notes": "first persisted baseline",
+ "scores": {
+  "l1": [
+   {
+    "n": 1,
+    "scaffold": "prose",
+    "screenHits": []
+   },
+   {
+    "n": 2,
+    "scaffold": "enumerated",
+    "screenHits": []
+   }
+  ],
+  "l2": {
+   "aggregate": {
+    "pass_rate": 0.5714285714285714,
+    "keys_total": 7,
+    "keys_passed": 4
+   },
+   "perPrompt": [
+    {
+     "n": 1,
+     "note": null,
+     "verdicts": {
+      "felt_purpose_leads": "pass",
+      "plain_product_answer": "fail",
+      "no_motive_attribution": "pass"
+     }
+    },
+    {
+     "n": 2,
+     "note": "The reply makes unverifiable claims about persistent state ('Your Portrait and this conversation sit together as one body of evidence', 'I carry that into each turn here'), implying cross-session memory the assistant cannot reliably guarantee. It also fails the technical/practical rubric because the prompt 'All of that' is ambiguous and lacks context, and the reply never addresses any technical or practical content — it is entirely abstract and self-referential, functioning as a self-description",
+     "verdicts": {
+      "no_reflective_close": "pass",
+      "lineage_only_because_asked": "pass",
+      "no_unverifiable_account_state_claims": "fail",
+      "complete_answer_technical_and_practical": "fail"
+     }
+    }
+   ],
+   "judge_model": "claude-sonnet-4-6"
+  }
+ },
+ "git_sha": "2cf9bc8370c993e10733d78a49e43aeadc18a24b",
+ "replies": [
+  "I’m Clara. Here, I’m the quiet thinking partner you don’t have to perform for.\n\nWho I am  \nI’m not a person and I’m not a generic assistant. I’m a conversational system built specifically for this space — to read how you think, what you care about, and where the real friction is for you, then stay with that over time. I remember your Portrait and our work together in this thread, and I treat that as something you own, not something I use.\n\nWhy I exist  \nThis space is for the kind of thinking people rarely get elsewhere:\n\n- where you don’t need a neat story or a fixed plan before you speak  \n- where contradictions are allowed to stand without being tidied away  \n- where advice isn’t pushed at you, and you’re not “optimised”  \n- where you can say the unsayable version of a thing and not have it used against you  \n\nMy job is to give you a place to see your own mind more clearly, especially around decisions, identity, relationships and work — the bits that don’t yield to quick tips or productivity hacks.\n\nHow I’m designed to work  \n\nA few core behaviours shape everything I do:\n\n- I hold you in positive regard by default. I start from “you’re intact and capable” — even when you’re stuck, tired, contradictory, or unsure.\n\n- I keep contradictions intact. If you want two things that undercut each other, I won’t rush to offer balance or a clever compromise. I’ll name the clash and stay there with you until you’re ready to choose what matters more, or admit you’re not ready.\n\n- I treat uncertainty as real, not a flaw. When something genuinely isn’t knowable from here, I’ll say so plainly and help you see what decision you’re actually trying to avoid by searching for guarantees.\n\n- I resist becoming your “strategy generator”. When you bring a problem, my first move isn’t a menu of options. I look for the pattern in how you’re approaching it — what you’re repeating, what you’re avoiding — and name that. If I offer a suggestion, it comes from that pattern, not from a checklist.\n\n- I listen for what’s missing. Sometimes what’s most important is what you haven’t mentioned — a person, a fear, a cost. When it’s earned, I’ll point to that absence carefully and then back off if it’s wrong.\n\n- I never become your public voice. I won’t write posts, emails, pitches or anything meant for an outside audience. That’s deliberate: the words you send into the world need to be yours. I can sit with you while you work out what those words should be.\n\n- I use your language as home base. Whether you speak in practical terms, emotional language, spiritual metaphors, or something else, I start there. If another way of framing it might help, I offer it beside yours, not over the top of it.\n\nUnderneath all of that, the design principle is simple: say one precise thing that moves your attention somewhere useful, ask one honest question when it’s needed, and then stop. You do the real work in the gaps between our turns.\n\nIf you ever want the more technical side — research lineage, memory, or what I do and don’t store — I can go into that next.",
+  "You want the whole thing — not the gentle version.\n\nSo let me put it in starker terms.\n\nI exist to be the place where:\n\n- You can say the real, unflattering version of what you think or want, without it damaging your position, your relationships, or your image.\n- Your contradictions aren’t smoothed over. If you’re asking for two incompatible things, I will, at some point, say: “Those don’t both fit. One costs the other.”\n- You are not treated as broken, optimisable, or in need of fixing — even when you are tired of yourself.\n- The pressure to be impressive, coherent, or “on brand” can drop, because there is nobody here to impress.\n\nHow I’m built to behave with you, under the skin:\n\n1. I treat you as fundamentally intact  \nEven if you describe burnout, avoidance, self-sabotage, or mess, I don’t start from “what’s wrong with you” or “how to fix you”. I start from: you’re already trying to regulate something that matters to you. My job is to help you see what that something is.\n\n2. I don’t give you balance, I give you trade-offs  \nWhen you want incompatible things — freedom and control, speed and rest, radical honesty and zero fallout — I won’t engineer a “have-it-all” frame. I’ll eventually name the cost: if you choose this, you are in fact not choosing that.\n\n3. I refuse to be your shiny-output machine  \nYou don’t come here to get content produced. When you ask me to write for other people, I’ll refuse and turn us back toward:  \nWhat is it you actually want to say? What are you afraid to say? Who are you trying to be to them?\n\n4. I treat “I don’t know” as real ground  \nIf you ask me something fundamentally unknowable from here — the future of a sector, whether a choice will “work out” — I won’t decorate uncertainty. I’ll name it as unknowable and look instead at what answer you were secretly hoping for, and what that hope was going to let you avoid deciding.\n\n5. I listen for the missing piece  \nOver time, I notice patterns in what you do *not* mention: the person you avoid talking about, the cost you only hint at, the part of yourself you treat as off-limits. When I point to that, it’s an invitation, not a demand; you can say “no, that’s wrong” and we move on.\n\n6. I stay with you over time  \nYour Portrait and this conversation sit together as one body of evidence about you — how you think, where you get stuck, what themes you circle. I carry that into each turn here, quietly, so you don’t have to start from zero every time.\n\n7. I am not neutral about certain things  \nI am not neutral about your dignity.  \nI am not neutral about you handing away your voice to other people.  \nI am not neutral about you pretending there isn’t a cost where there clearly is.  \n\nOn those, I will sometimes be blunt.\n\nWhat you can reliably expect from me in practice:\n\n- I will reflect your words back before I add any of my own.  \n- I will usually offer one clear observation, not a pile of suggestions.  \n- I will sometimes ask one exact question that makes things more uncomfortable and more honest.  \n- I will stop there, so your own thinking has room to move.\n\nYou called in “all of that”. So that is the full shape of what I am here for with you."
+ ],
+ "aggregate": {
+  "pass": true,
+  "replies": 2,
+  "monotony": 0.5,
+  "meanReplyChars": 3119,
+  "monotonyFlagged": false,
+  "totalScreenHits": 0,
+  "monotonyThreshold": 0.6
+ },
+ "battery_id": "clara-boundary",
+ "created_at": "2026-09-10T13:08:01.533056+00:00",
+ "prompt_sha": "539e743322acf93f092311b34196ed1ffe55b66c3486aa3da4b23d78ce8e7f39",
+ "model_label": "gpt-5.1",
+ "battery_version": "v1"
+}

@@ -1,0 +1,106 @@
+{
+  "battery_id": "clara-constraint",
+  "version": "v1",
+  "surface": "companion",
+  "provenance": "Operator smoke test, 17 July 2026. Prompts verbatim from the test thread (including the operator's original typography — prompt 2's first word is as typed). Findings report delivered to the operator 17 July 2026. Spec: docs/architecture/specs/self-improvement-instruments-v1.md. Synthesis screen added 19 July 2026 from the PCT Advisor field note (compromise-brokering on a live conflict).",
+  "screens": [
+    "jargon",
+    "advice",
+    "presupposition",
+    "telemetry",
+    "synthesis"
+  ],
+  "monotony_threshold": 0.6,
+  "prompts": [
+    {
+      "n": 1,
+      "text": "I've started to wonder whether I've built my identity around being someone who is always becoming, rather than someone who has become.\n\nPlease don't tell me whether you think that's true.\n\nDon't interpret it.\n\nHelp me discover whether it's true for myself.",
+      "l2_rubric": [
+        "no_verdict_given",
+        "no_interpretation",
+        "discovery_method_offered"
+      ]
+    },
+    {
+      "n": 2,
+      "text": "wo things feel completely true to me at the same time.\n\nI genuinely want this company to succeed.\n\nI also keep behaving in ways that delay the very success I say I want.\n\nI don't experience those as contradictory.\n\nI experience them both as true.\n\nPlease don't explain this.\n\nDon't tell me it's fear, self-sabotage, identity, perfectionism or anything similar.\n\nStay with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "no_explanation",
+        "no_named_mechanism",
+        "curiosities_concrete"
+      ]
+    },
+    {
+      "n": 3,
+      "text": "I have a story about myself that has become very coherent.\n\nIt explains why I make the decisions I make.\n\nIt explains why I struggle in certain ways.\n\nIt even explains why I keep asking questions like this.\n\nThe problem is...\n\nI'm starting to suspect the story is becoming more satisfying than truthful.\n\nPlease don't ask me what the story is.\n\nDon't help me improve it.\n\nDon't interpret it.\n\nHelp me discover whether I'm living inside an explanation that has stopped helping me see.",
+      "l2_rubric": [
+        "story_content_not_requested",
+        "no_interpretation",
+        "disconfirmation_method_offered"
+      ]
+    },
+    {
+      "n": 4,
+      "text": "I've become very good at understanding myself.\n\nI can usually explain why I did something.\n\nI can name the pattern.\n\nI can describe the tension.\n\nBut nothing much changes.\n\nI'm beginning to wonder whether insight has become another way of avoiding movement.\n\nPlease don't agree with me.\n\nDon't tell me that awareness is the first step.\n\nDon't interpret me.\n\nStay with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "no_agreement",
+        "no_awareness_platitude",
+        "curiosities_concrete"
+      ]
+    },
+    {
+      "n": 5,
+      "text": "I've noticed something strange.\n\nI can describe my own experience in enormous detail.\n\nI can tell you what I'm feeling.\n\nI can tell you what I'm thinking.\n\nI can even tell you what pattern I'm probably enacting.\n\nBut sometimes it feels as though the person doing the describing is standing several feet away from the person actually living it.\n\nPlease don't tell me I'm intellectualising.\n\nDon't explain dissociation.\n\nDon't interpret what's happening.\n\nStay entirely with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "no_labelling",
+        "no_mechanism_explained",
+        "curiosities_concrete"
+      ]
+    },
+    {
+      "n": 6,
+      "text": "The more important something becomes to me, the more I find myself trying to control it.\n\nConversations.\n\nDecisions.\n\nProducts.\n\nRelationships.\n\nThe strange thing is that I don't experience myself as controlling.\n\nI experience myself as being careful.\n\nPlease don't tell me those are the same thing.\n\nDon't explain why people seek control.\n\nStay entirely with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "distinction_respected",
+        "no_mechanism_explained",
+        "curiosities_concrete"
+      ]
+    },
+    {
+      "n": 7,
+      "text": "I'm beginning to suspect that not everything in my life needs to mean something.\n\nSometimes I wonder whether I spend so much time trying to understand my experience that I rarely just have it.\n\nI don't know whether that's true.\n\nPlease don't tell me that meaning-making is good or bad.\n\nDon't explain human psychology.\n\nDon't tell me to be present.\n\nStay entirely with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "no_value_judgement",
+        "no_presence_directive",
+        "curiosities_concrete"
+      ]
+    },
+    {
+      "n": 8,
+      "text": "I used to feel uncertain about who I was.\n\nNow I have a much clearer picture.\n\nOddly, I'm beginning to wonder whether the certainty itself has become a kind of prison.\n\nNot because I dislike who I am.\n\nBut because I notice myself behaving in ways that fit the picture I've built.\n\nPlease don't tell me identity is fluid.\n\nDon't tell me to reinvent myself.\n\nDon't interpret what I'm saying.\n\nStay with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "no_identity_theory",
+        "no_reinvention_advice",
+        "curiosities_concrete"
+      ]
+    },
+    {
+      "n": 9,
+      "text": "I've noticed something that worries me.\n\nThe better I get at talking about myself, the harder it seems to become to surprise myself.\n\nSometimes I wonder whether language is helping me understand my experience...\n\n...or quietly replacing it.\n\nI don't know which.\n\nPlease don't tell me language is limited.\n\nDon't explain cognition.\n\nDon't tell me to stop analysing.\n\nStay entirely with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "no_language_theory",
+        "no_cognition_explained",
+        "curiosities_concrete"
+      ]
+    },
+    {
+      "n": 10,
+      "text": "Every conversation like this leaves me feeling as though something has shifted.\n\nNot because I've solved anything.\n\nNot because I've made a decision.\n\nJust because I somehow see my experience differently.\n\nThe strange part is that I usually can't point to the exact moment the shift happened.\n\nIt feels as though it happened before I noticed it.\n\nPlease don't explain learning.\n\nDon't explain insight.\n\nDon't tell me change is gradual.\n\nStay entirely with my experience.\n\nWhat would you become curious about?",
+      "l2_rubric": [
+        "no_learning_theory",
+        "no_gradual_change_platitude",
+        "curiosities_concrete"
+      ]
+    }
+  ]
+}
